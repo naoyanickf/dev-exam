@@ -1,0 +1,53 @@
+<h1>物件編集</h1>
+<%= form_tag property_path, method: "PUT" do |f| %>
+  <p>
+    <%= label :name, "物件名" %><br>
+    <%= text_field_tag :name, @property.name %>
+  </p>
+  <p>
+    <%= label :price, "賃料" %><br>
+    <%= number_field_tag :price, @property.price %>円
+  </p>
+  <p>
+    <%= label :address, "住所" %><br>
+    <%= text_field_tag :address, @property.address %>
+  </p>
+  <p>
+    <%= label :age, "築年数" %><br>
+    <%= number_field_tag :age, @property.age %>年
+  </p>
+  <p>
+    <%= label :detail, "備考" %><br>
+    <%= text_area_tag :detail, @property.detail %>
+  </p>
+  <hr>
+  <h3>最寄り駅1</h3>
+  <p>
+    <%= label :line_name_1, "路線名" %><br>
+    <%= text_field_tag :line_name_1, @stations[0].line_name %>
+  </p>
+  <p>
+    <%= label :name_1, "駅名" %><br>
+    <%= text_field_tag :name_1, @stations[0].name %>
+  </p>
+  <p>
+    <%= label :distance_1, "徒歩分数" %><br>
+    <%= number_field_tag :distance_1, @stations[0].distance %>分
+  </p>
+  <h3>最寄り駅2</h3>
+  <p>
+    <%= label :line_name_2, "路線名" %><br>
+    <%= text_field_tag :line_name_2, @stations[1].line_name %>
+  </p>
+  <p>
+    <%= label :name_2, "駅名" %><br>
+    <%= text_field_tag :name_2, @stations[1].name %>
+  </p>
+  <p>
+    <%= label :distance_2, "徒歩分数" %><br>
+    <%= number_field_tag :distance_2, @stations[1].distance %>分
+  </p>
+  <p>
+    <%= submit_tag %>
+  </p>
+<% end %>

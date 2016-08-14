@@ -1,0 +1,32 @@
+<h1>物件一覧</h1>
+<table>
+  <thead>
+    <tr>
+      <td>物件名</td>
+      <td>賃料</td>
+      <td>住所</td>
+      <td>築年数</td>
+      <td>備考</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.name %></td>
+        <td><%= property.price %></td>
+        <td><%= property.address %></td>
+        <td><%= property.age %></td>
+        <td><%= property.detail %></td>
+        <td><%= link_to "詳細", property_path(property) %></td>
+        <td><%= link_to "編集", edit_property_path(property) %></td>
+        <td><%= link_to "削除", property_path(property), method: "delete" %></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div>
+  <%= link_to "物件を登録する", new_property_path %>
+</div>

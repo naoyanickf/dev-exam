@@ -1,0 +1,53 @@
+<h1>物件登録</h1>
+<%= form_tag properties_path, method: "POST" do |f| %>
+  <p>
+    <%= label :name, "物件名" %><br>
+    <%= text_field_tag :name %>
+  </p>
+  <p>
+    <%= label :price, "賃料" %><br>
+    <%= number_field_tag :price %>円
+  </p>
+  <p>
+    <%= label :address, "住所" %><br>
+    <%= text_field_tag :address %>
+  </p>
+  <p>
+    <%= label :age, "築年数" %><br>
+    <%= number_field_tag :age %>年
+  </p>
+  <p>
+    <%= label :detail, "備考" %><br>
+    <%= text_area_tag :detail %>
+  </p>
+  <hr>
+  <h3>最寄り駅1</h3>
+  <p>
+    <%= label :line_name_1, "路線名" %><br>
+    <%= text_field_tag :line_name_1 %>
+  </p>
+  <p>
+    <%= label :name_1, "駅名" %><br>
+    <%= text_field_tag :name_1 %>
+  </p>
+  <p>
+    <%= label :distance_1, "徒歩分数" %><br>
+    <%= number_field_tag :distance_1 %>分
+  </p>
+  <h3>最寄り駅2</h3>
+  <p>
+    <%= label :line_name_2, "路線名" %><br>
+    <%= text_field_tag :line_name_2 %>
+  </p>
+  <p>
+    <%= label :name_2, "駅名" %><br>
+    <%= text_field_tag :name_2 %>
+  </p>
+  <p>
+    <%= label :distance_2, "徒歩分数" %><br>
+    <%= number_field_tag :distance_2 %>分
+  </p>
+  <p>
+    <%= submit_tag %>
+  </p>
+<% end %>
