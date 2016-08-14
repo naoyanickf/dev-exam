@@ -1,5 +1,5 @@
 <h1>物件編集</h1>
-<%= form_tag properties_path, method: "POST" do |f| %>
+<%= form_tag property_path, method: "PUT" do |f| %>
   <p>
     <%= label :name, "物件名" %><br>
     <%= text_field_tag :name, @property.name %>
